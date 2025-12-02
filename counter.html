@@ -10,13 +10,26 @@ meta info and scripts you want to load early-->
 <!--everything the user sees goes in the body tag below-->
 <body>
     <!--the div is a box or section on your webpage, used to group things together, like a folder for content-->
-    <div class="container"> <!--class is a label you give to an element, used mostly for styling with css, example if you'd like to style the div you would write 
-        .container {
-            background: lighblue;}-->
-        <p id="count">0</p>
-        
-    </div>
+    <div class="container"> <!--class is a label you give to an element, used mostly for styling with css, example if you'd like to style the div you would write .container {background: lighblue;}-->
+        <p id="count">0</p> 
+        <!--this is a paragraph tag; inside it is a 0, the id="count" in which the id is a unique name for one specific element; used to find the exact element
+        an example of this would be document.getElementById("count").textContent=5; & the p tag is named count-->
+        <!--an element just fyi consists of the opening  tag, the content and the closing tag for example like so <p>hello</p>, that whole thing is an element, there can be the heading element, the image element, div element and so on-->
+        <!--another fiy divs you can think of as boxes used to organize the webpage and are called upon with names or are identified by id which rests in that div element directly or in a p element inside the div etc-->
+        <!--QQQQQ HOW DOES THE 0 FIT INTO THE CODE, WHY-->
+       <!--QQQQQ is class just to identify and alsi it not an element, what is it called-->
+        <div>
+            <button> onclick="dec()">Decrement</button>
+            <button> onclick="inc()">Increment</button>
+        </div>
+        <!--above are the buttons to increment in number and decrement, using the button element with the equations-->
+        <div class="clicks">
+            <p>Clicks on Increment: <span id="incCount">0</span></p>
+            <p>Clicks on Decrement: <span id="DecCount">0</span></p>
+        </div>
+    </div> 
 </body>
+</html>
 
 
 
