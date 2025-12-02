@@ -8,3 +8,22 @@ body {
     background-color: #f0f4;
 }
 
+.container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.clicks {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
