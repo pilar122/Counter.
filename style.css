@@ -1,3 +1,5 @@
+
+
 body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
@@ -27,3 +29,4 @@ button {
     font-size: 1.1em;
     margin-top: 10px;
 }
+/*add comments to the css*/
