@@ -15,3 +15,5 @@ function update() {
     decCount.textContent = cd;
     count.textContent = c;
 }
+
+//add comments on elements 
