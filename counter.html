@@ -1,46 +1,29 @@
-<!--this tells the browser that this file is written in modern html, it is not a tag; just an instruction-->
-<!DOCTYPE html> 
-<!--this is the root of the entire webpage, everything on the page goes inside these tags-->
-<html lang="en">
-<!--this is information about the page, not what the users see
-it usually contains the <title> tag which goes on the pages tab, the css links,
-meta info and scripts you want to load early-->
-<head>
-    <meta charset="UTF-8">
-    <title>Counter.</title>
-    <link rel="stylesheet" href="style.css">
+<!DOCTYPE html> <!--this tells the browser that it is html and always goes first-->
+<html lang="en"> <!--root element, everything lives inside this-->
+<head> <!--th head contains info about the page, it is not what the users see-->
+    <meta charset="UTF-8"> <!--this allows characters like emjis, letters and symbols display correctly on the page-->
+    <title>Counter.</title> <!--this shows in the browser tab-->
 
+    <style>
+        /* css will/can go here and this is for page visuals*/
+
+        body {
+            font-family: Arial; /*this is the font used for all text*/
+            display: flex; /* flexbox a layout system for positioning items "learn more about this"*/
+            justify-content: center; /*centers content horizontally*/
+            align-items: center; /*centers content vertically*/
+            height: 100vh;/* 100vh=100% of viewport height (fullscreen)*/
+            margin: 0;/*removes default spacing around the page*/
+            background: #752abb;/*this is the background color*/
+        }
+
+        .container {
+            
+        }
+
+
+    </style>
 </head>
-<!--the <title> tag shows up in the browser tab as previously stated-->
-<!--everything the user sees goes in the body tag below-->
-<body>
-    <!--the div is a box or section on your webpage, used to group things together, like a folder for content-->
-    <div class="container"> <!--class is a label you give to an element, used mostly for styling with css, example if you'd like to style the div you would write .container {background: lighblue;}-->
-        <p id="count">0</p> 
-        <!--this is a paragraph tag; inside it is a 0, the id="count" in which the id is a unique name for one specific element; used to find the exact element
-        an example of this would be document.getElementById("count").textContent=5; & the p tag is named count-->
-        <!--an element just fyi consists of the opening  tag, the content and the closing tag for example like so <p>hello</p>, that whole thing is an element, there can be the heading element, the image element, div element and so on-->
-        <!--another fiy divs you can think of as boxes used to organize the webpage and are called upon with names or are identified by id which rests in that div element directly or in a p element inside the div etc-->
-        <!--QQQQQ HOW DOES THE 0 FIT INTO THE CODE, WHY-->
-       <!--class is an attribute-->
-        <div>
-            <button onclick="dec()">Decrement</button>
-            <button onclick="inc()">Increment</button>
-        </div>
-        <!--above are the buttons to increment in number and decrement, using the button element with the equations-->
-        <div class="clicks">
-            <p>Clicks on Increment: <span id="incCount">0</span></p>
-            <p>Clicks on Decrement: <span id="DecCount">0</span></p>
-        </div>
-    </div> 
-</body>
+
+
 </html>
-
-
-
-
-
-
-
-
-
