@@ -124,7 +124,18 @@
         //step 4; attach listeners (connect clicks to functions)
         //addEventListeners() watches for events (like clicks) and runs a function when they happen
 
-        
+        incrementBtn.addEventListener('click', increment);
+        //when incrementBtn is clicked, run the increment function
+
+        decrementBtn.addEventListener('click', decrement);
+        //when decrement is clicke, run the decrement function
+
+        resetBtn.addEventListener('click', reset);
+        //when the resetBtn is clicked, run the reset function
+
+        //note: we write 'increment' not 'increment()'
+        //writting increment() would run it immidietly
+        //writting increment passes the function itself to be called later on click
 
 
     </script>
