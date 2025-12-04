@@ -18,12 +18,117 @@
         }
 
         .container {
-            
+            background: white; /*background color of our counter box*/
+            padding:40px; /*space inside the box (breathing room)*/
+            border-radius: 15px; /*rounds the corners*/
+            box-shadow: 0 10px rgba(0,0,0,0,3); /*drop shadow: horizontal, vertical, blur, color*/
+            text-align: center; /*centers text inside this container*/
         }
 
+        #counter {
+            font-size: 72px; /*makes the number BIG*/
+            font-weight: bold; /*makes it thick*/
+            color: #667eea; /*text color*/
+            margin: 20px 0; /*space above and below (20px top/bottom, 0 left/right)*/
 
+        }
+
+        button {
+            padding: 15px 30 px; /*space inside button: 15px top/bottom and 30px left/right*/
+            font-size: 18px; /* Size of button text*/
+            border: none; /*removes default ugly border*/
+            border-radius: 8px; /*round button corners*/
+            cursor: pointer; /* change mouse to pointing hand on hover*/
+            margin: 5px; /* space between buttons*/
+            font-weight: bold; /* thick text */
+        }
+
+        increment {
+            background-color: green;
+            color: white;
+        }
+
+        decrement {
+            background-color: pink;
+            color: white;
+        }
+
+        reset {
+            background-color: orange;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8; /* make button slightly transparent on hover - visual feedback*/
+        }
     </style>
 </head>
 
+<body> <!--the body contains everything the user sees-->
+
+    <div class="container"> <!-- a container box - groups relayed items together-->
+
+        <h1>Counter.</h1> <!-- Heading 1 - the title-->
+
+        <div id="counter">0</div> <!--this div displays our number. id="counter" lets js find it-->
+
+        <!--buttons trigger actions when clicked-->
+        <button id="decrement">-</button> <!-- id="decrement" lets js identify THIS specific button-->
+        <button id="reset">Reset</button> <!--id="reset" for the reset button-->
+        <button id="increment">+</button> <!-- id="increment" for the + button-->
+    </div>
+
+    <script>
+        // javascript - the logic/brain of your app
+        //everything between <script> tags is javascript code
+
+        // step 1: declare your state (what data you are tracking)
+        let count = 0; // 'let' creates a variable. count stores our current number. starts at 0.
+        
+        //step 2: get references to html elements
+        // document = the entire html page
+        // getElementById() = finds an element by its id attribute
+        const counterDisplay = document.getElementById('counter'); // grabs the <div id="counter">
+        const incrementBtn = document.getElementById('increment'); //grabs the increment button 
+        const decrementBtn = document.getElementById('decrement'); //grabs the decrement button
+        const resetBtn = document.getElementById('reset'); //grabs the reset button
+
+        // 'const' = constant - creates a variable that wont be reassigned
+        // we use const for these because the button elements themselves dont change
+        
+        //step 3: create functions (reusable blocks of code)
+        function increment() {
+            //this function runs when = button is clicked
+            count = count + 1; // increases count by 1 (can also write: count++)
+            updateDisplay(); //calls the updateDisplay function to show new number
+        }
+
+        function decrement() {
+            //this function runs when - button is clicked
+            count = count - 1; // decreases count by 1 (can also write: count--)
+            updateDisplay(); //updates what is shown on screen
+        }
+
+        function reset() {
+            // this fundtion runs when reset button is clicked
+            count = 0; //sets count back to zero
+            updateDisplay(); //updates the display
+        }
+
+        function updateDisiplay() {
+            // this function updates what the user sees
+            // textContent = the text inside an html element
+            counterDisplay.textContent = count; //changes the number shown in <div id="counter">
+        }
+
+        //step 4; attach listeners (connect clicks to functions)
+        //addEventListeners() watches for events (like clicks) and runs a function when they happen
+
+        
+
+
+    </script>
+
+</body>
 
 </html>
